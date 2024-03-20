@@ -1,0 +1,17 @@
+
+amends "..."
+
+services {
+  ["app"] {
+    spec {
+      type = "NodePort"
+      ports {
+        new {
+          port = 8080
+          protocol = "TCP"
+          targetPort = 8080
+        }      
+      }
+    }
+  }
+}

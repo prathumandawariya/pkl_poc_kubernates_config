@@ -1,0 +1,19 @@
+
+amends "template.pkl"
+
+services {
+  default {
+    metadata {
+      labels {
+        ["app"] = module.app
+        ["env"] = module.env
+      }
+    }
+    spec {
+      selector {
+        ["app"] = module.app
+        ["env"] = module.env
+      }
+    }
+  }
+}

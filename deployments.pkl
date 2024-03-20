@@ -1,0 +1,23 @@
+
+amends "template.pkl"
+
+deployments {
+  default {
+    spec {
+      selector {
+        matchLabels {
+          ["app"] = module.app
+          ["env"] = module.env
+        }
+      }
+      template {
+        metadata {
+          labels {
+            ["app"] = module.app
+            ["env"] = module.env
+          }
+        }
+      }
+    }
+  }
+}

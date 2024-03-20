@@ -1,0 +1,25 @@
+amends "..."
+
+deployments {
+  ["app"] {
+    spec {
+      replicas = 1
+      template {
+        spec {
+          containers {
+            new {
+              name = "app"
+              image = "prathu1993/app"
+              imagePullPolicy = "Always"
+              ports {
+                new {
+                  containerPort = 8080
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
