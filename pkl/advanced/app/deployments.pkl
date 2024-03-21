@@ -9,7 +9,7 @@ deployments {
           containers {
             new {
               name = "app"
-              image = "prathu1993/app"
+              image = "kajay0322/app"
               imagePullPolicy = "Always"
               ports {
                 new {
