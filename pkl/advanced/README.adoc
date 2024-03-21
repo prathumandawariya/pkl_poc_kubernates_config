@@ -1,0 +1,27 @@
+
+To evaluate Pkl manifests for all
+----
+$ pkl eval **/*.pkl
+----
+
+
+To evaluate Pkl manifests for all applications in the _staging_ environment in the region 
+
+[source,bash]
+----
+$ pkl eval */staging/region/*.pkl
+----
+
+To apply Pkl manifests to Kubernetes, run:
+
+[source,bash]
+----
+$ pkl eval app/production/region/*.pkl | kubectl apply -f -
+----
+
+# Write all resources as a YAML stream to `output.yml`
+$ pkl eval -o output.yml **/*.pkl
+
+# Write each resource as its own file to a path within `.output/`
+$ pkl eval -m .output/ **/*.pkl
+----
